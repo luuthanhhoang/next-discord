@@ -1,9 +1,11 @@
-import React from "react";
+import { ModeToggle } from "@/components/mode-toggle";
+import { UserButton } from "@clerk/nextjs";
 
-type Props = {};
-
-const Page = (props: Props) => {
-  return <div>Page</div>;
-};
-
-export default Page;
+export default function Home() {
+  return (
+    <div>
+      <UserButton afterSignOutUrl="/" />
+      <ModeToggle />
+    </div>
+  );
+}
